@@ -102,7 +102,7 @@ export const GameContainer = () => {
             }
         }
         
-    })
+    }, [inPlay, isMatching, cards, scores, playMatchSound, moves, playNoMatchSound]);
 
     return (
         <GameDisplay cards={cards} onClick={flippedCards} scores={scores} moves={moves} resetGame={resetGame}/>
