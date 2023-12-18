@@ -8,12 +8,13 @@ export const TodoListContainer = () => {
     const [firstLoad, setFirstLoad] = useState(true);
 
     useEffect(() => {
-        if (firstLoad) {
-            const localStorageData = localStorage.getItem('task') || '[]';
-            setTasks(JSON.parse(localStorageData));
-            setFirstLoad(false);
-        }
-        // eslint-disable-line react-hooks/exhaustive-deps
+        setTimeout(() => {
+            if (firstLoad) {
+                const localStorageData = localStorage.getItem('task') || '[]';
+                setTasks(JSON.parse(localStorageData));
+                setFirstLoad(false);
+            }
+        }, 100)
     })
 
     const updateLocalStorage = (updatedTasks) => {
