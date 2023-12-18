@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { Grid, Box, Button, Container } from '@mui/material'
 import { GameCard } from "./GameCard";
 
