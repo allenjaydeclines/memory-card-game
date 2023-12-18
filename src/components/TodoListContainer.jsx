@@ -13,6 +13,7 @@ export const TodoListContainer = () => {
             setTasks(JSON.parse(localStorageData));
             setFirstLoad(false);
         }
+        // eslint-disable-line react-hooks/exhaustive-deps
     })
 
     const updateLocalStorage = (updatedTasks) => {
